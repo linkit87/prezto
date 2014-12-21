@@ -9,3 +9,8 @@
 if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+
+source ~/.nvm/nvm.sh
+FPATH=$HOME/.dotfiles/zsh/completion:$FPATH
+
+source "${HOME}/.dotfiles/zsh/env"

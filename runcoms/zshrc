@@ -1,4 +1,4 @@
-#
+
 # Executes commands at the start of an interactive session.
 #
 # Authors:
@@ -11,3 +11,39 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Base16 Shell
+#BASE16_SCHEME="flat"
+#BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
+#[[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
+
+eval "$(rbenv init -)"
+eval "$(jenv init -)"
+eval "$(goenv init -)"
+eval "$(grunt --completion=zsh)"
+
+#android SDK
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
+#antigen
+source $HOME/.dotfiles/zsh/antigen/antigen.zsh
+#antigen bundles
+antigen bundle kennethreitz/autoenv
+#autoenv
+#source /usr/local/opt/autoenv/activate.sh
+#variables
+source $HOME/.dotfiles/zsh/variables
+#alias
+source $HOME/.dotfiles/zsh/alias
+##functions
+source $HOME/.dotfiles/zsh/functions
+##private
+source $HOME/.dotfiles/zsh/private
+##completion
+# -> .zshenv
+source /usr/local/share/zsh/site-functions/_aws
+##folder
+source $HOME/.dotfiles/zsh/folders
+#npm autocomplete fix
+eval "$(npm completion 2>/dev/null)"
+
