@@ -10,7 +10,8 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-source ~/.nvm/nvm.sh
 FPATH=$HOME/.dotfiles/zsh/completion:$FPATH
 
 source "${HOME}/.dotfiles/zsh/env"
+
+export ETH_IP="$(ifconfig $(ifconfig | grep -B2 "40:6c:8f:46:48:bb" | head -n 1 | cut -f1 -d":") | grep --color=auto --color=auto 'inet ' | sed -e 's/:/ /' | awk '{print ""$2""}')"

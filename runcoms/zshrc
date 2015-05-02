@@ -17,9 +17,10 @@ fi
 #BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
 #[[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
 
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
+export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
-eval "$(goenv init -)"
+#eval "$(goenv init -)"
 
 #android SDK
 export ANDROID_HOME=/usr/local/opt/android-sdk
@@ -28,6 +29,7 @@ export ANDROID_HOME=/usr/local/opt/android-sdk
 source $HOME/.dotfiles/zsh/antigen/antigen.zsh
 #antigen bundles
 antigen bundle kennethreitz/autoenv
+#antigen-bundle fasd
 #autoenv
 #source /usr/local/opt/autoenv/activate.sh
 #variables
@@ -45,4 +47,6 @@ source /usr/local/share/zsh/site-functions/_aws
 source $HOME/.dotfiles/zsh/folders
 #npm autocomplete fix
 eval "$(npm completion 2>/dev/null)"
+
+#typeset -gU cdpath fpath mailpath path
 

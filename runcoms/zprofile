@@ -44,9 +44,6 @@ typeset -gU cdpath fpath mailpath path
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
-  $HOME/.jenv/bin
-  $HOME/.goenv/bin
-  $GOPATH/bin
   $HOME/.dotfiles/bin
   $path
 )
@@ -76,3 +73,7 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+
+#Max file limit
+
+ulimit -n 10000
