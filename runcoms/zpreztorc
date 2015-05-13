@@ -38,9 +38,8 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'osx' \
   'homebrew' \
-  'node' \
   'ruby' \
-  'tmux' 
+  'tmux'
 
 #
 # Editor

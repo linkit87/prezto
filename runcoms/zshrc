@@ -12,28 +12,10 @@ fi
 
 # Customize to your needs...
 
-# Base16 Shell
-#BASE16_SCHEME="flat"
-#BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
-#[[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
-
-#eval "$(rbenv init -)"
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-#eval "$(goenv init -)"
-
-#android SDK
-export ANDROID_HOME=/usr/local/opt/android-sdk
-
 #antigen
 source $HOME/.dotfiles/zsh/antigen/antigen.zsh
-#antigen bundles
-antigen bundle kennethreitz/autoenv
-#antigen-bundle fasd
-#autoenv
-#source /usr/local/opt/autoenv/activate.sh
-#variables
-source $HOME/.dotfiles/zsh/variables
+    #antigen bundles
+    antigen bundle kennethreitz/autoenv
 #alias
 source $HOME/.dotfiles/zsh/alias
 ##functions
@@ -45,8 +27,5 @@ source $HOME/.dotfiles/zsh/private
 source /usr/local/share/zsh/site-functions/_aws
 ##folder
 source $HOME/.dotfiles/zsh/folders
-#npm autocomplete fix
+# npm autocomplete fix
 eval "$(npm completion 2>/dev/null)"
-
-#typeset -gU cdpath fpath mailpath path
-
